@@ -20,7 +20,6 @@ generateBtn.addEventListener("click", writePassword);
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random()*26)+ 97);
 }
-console.log(getRandomLower());
 
 function getRandomUpper() {
   return String.fromCharCode(Math.floor(Math.random()*26)+ 65);
@@ -33,8 +32,6 @@ function getRandomNumber() {
 function getRandomSymbol() {
   return String.fromCharCode(Math.floor(Math.random()*15)+ 33);
 }
-console.log(getRandomSymbol());
-
 
 
 // created propts for selecting password options
@@ -45,5 +42,14 @@ var uppers = confirm("Will your password include uppercase letters?");
 var lowers = confirm("Will your password include lowercase letters?");
 var numbers = confirm("Will your password include numbers?");
 var symbols = confirm("Will your password include symbols?");
+
+while (!uppers && !lowers && !numbers && !symbols) {
+  alert("You must select at least one character type!")
+  uppers = confirm("Will your password include uppercase letters?");
+  lowers = confirm("Will your password include lowercase letters?");
+  numbers = confirm("Will your password include numbers?");
+  symbols = confirm("Will your password include symbols?");
+
+}
 
 
