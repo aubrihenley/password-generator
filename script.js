@@ -30,8 +30,20 @@ function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random()*10)+ 48);
 }
 
+function getRandomSymbol() {
+  return String.fromCharCode(Math.floor(Math.random()*15)+ 33);
+}
+console.log(getRandomSymbol());
 
 
 
+// created propts for selecting password options
+var pswdLength = Number(prompt("How many characters would you like your password to be?"));
+  while (isNaN(length) || length < 8 || length > 128) length= Number(prompt("Length must be 8-128 characters. Please verify how long you would like your password to be."));
+
+var uppers = confirm("Will your password include uppercase letters?");
+var lowers = confirm("Will your password include lowercase letters?");
+var numbers = confirm("Will your password include numbers?");
+var symbols = confirm("Will your password include symbols?");
 
 
