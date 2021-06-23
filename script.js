@@ -34,21 +34,22 @@ function getRandomSymbol() {
 }
 
 
-// created propts for selecting password options
+// created prompts for selecting password options
 var pswdLength = Number(prompt("How many characters would you like your password to be?"));
   while (isNaN(length) || length < 8 || length > 128) length= Number(prompt("Length must be 8-128 characters. Please verify how long you would like your password to be."));
 
-var uppers = confirm("Will your password include uppercase letters?");
-var lowers = confirm("Will your password include lowercase letters?");
-var numbers = confirm("Will your password include numbers?");
-var symbols = confirm("Will your password include symbols?");
+var uppers = confirm("Click 'okay' if your password will include uppercase letters?");
+var lowers = confirm("Click 'okay' if your password will include lowercase letters?");
+var numbers = confirm("Click 'okay' if your password will include numbers?");
+var symbols = confirm("Click 'okay' if your password will include symbols?");
 
+//if no options are selected, alert and run through prompts again.
 while (!uppers && !lowers && !numbers && !symbols) {
   alert("You must select at least one character type!")
-  uppers = confirm("Will your password include uppercase letters?");
-  lowers = confirm("Will your password include lowercase letters?");
-  numbers = confirm("Will your password include numbers?");
-  symbols = confirm("Will your password include symbols?");
+  uppers = confirm("Click 'okay' if your password will uppercase letters?");
+  lowers = confirm("Click 'okay' if your password will lowercase letters?");
+  numbers = confirm("Click 'okay' if your password will numbers?");
+  symbols = confirm("Click 'okay' if your password will symbols?");
 
 }
 
